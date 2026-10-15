@@ -1,0 +1,42 @@
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int hargaTiket = 35000;
+    int pilihan, jumlahPenumpang;
+    int total;
+
+    cout << "=== PEMESANAN TIKET BUS ==="<<endl;
+    cout << "1. Malang - Surabaya"<<endl;
+    cout << "Harga tiket: Rp35000"<<endl;
+
+    cout << "Pilih tujuan (1): ";
+    cin >> pilihan;
+
+    if (pilihan != 1) {
+        cout << "Pilihan tujuan tidak valid!"<<endl;
+        return 0;
+    }
+
+    cout << "Jumlah penumpang: ";
+    cin >> jumlahPenumpang;
+
+    if (jumlahPenumpang <= 0) {
+        cout << "Jumlah penumpang tidak valid!"<<endl;
+        return 0;
+    }
+
+    total = hargaTiket * jumlahPenumpang;
+
+    cout << "=== DETAIL PEMESANAN ==="<<endl;
+    cout << "Tujuan: Malang - Surabaya"<<endl;
+    cout << "Harga tiket: Rp" << hargaTiket << endl;
+    cout << "Jumlah penumpang: "
+         << jumlahPenumpang << endl;
+    cout << "Total pembayaran: Rp"
+         << total << endl;
+
+    return 0;
+}
