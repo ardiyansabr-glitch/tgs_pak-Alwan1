@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int pilihan;
+    char ulang;
+    int total = 0;
+
+    do {
+        cout << "   MENU MAKANAN  " << endl;
+        cout << "1. Soto  - Rp15000" << endl;
+        cout << "2. Rawon - Rp20000" << endl;
+        cout << "Pilih menu 1 atau 2: ";
+        cin >> pilihan;
+
+        if (pilihan == 1) {
+            total += 15000;
+            cout << "Anda memilih Soto." << endl;
+        } else if (pilihan == 2) {
+            total += 20000;
+            cout << "Anda memilih Rawon." << endl;
+        } else {
+            cout << "Pilihan tidak valid!" << endl;
+        }
+
+        cout << "Tambah pesanan tekan y atau Y: ";
+        cin >> ulang;
+
+    } while (ulang == 'y' || ulang == 'Y');
+
+    cout << "Total pembayaran: Rp" << total << endl;
+
+    return 0;
+}
